@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Stock Information Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a simple web application built using React that connects to a free QUT API to fetch and display stock information. The purpose of this project is to provide users with an easy-to-access platform to view stock information in an organized manner. The web application allows users to filter the database of stocks based on stock symbol, stock name, and stock industry, and further explore detailed information about a selected stock, including open, high, low, close prices, and volume of trade for each date. Additionally, users can view a graph displaying the closing prices of selected dates and apply date-based filtering.
 
-## Available Scripts
+## Functionality and Implementation
 
-In the project directory, you can run:
+### Web Application
 
-### `npm start`
+The web application is an extension of the web application developed in assignment 2, and it offers the following features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Filtering**: Users can filter the stocks database using stock symbols, stock names, and stock industries.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Detailed Information**: Users can select a specific stock to view detailed information about it, including open, high, low, and close prices, along with the trading volume for each date.
 
-### `npm test`
+3. **Graphical Representation**: A graph displaying the closing price of the selected stock for specific dates is available.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Date Filtering**: Users can filter the stock information based on specific dates.
 
-### `npm run build`
+### Data Source
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The stock market statistic data is fetched from a free API provided by QUT (Queensland University of Technology). The API endpoint used are as follows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **/all (GET)**: Returns an array of all available stocks.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **/all?symbol=xxx (GET)**: Returns information for stocks that have a symbol containing the search term "xxx".
 
-### `npm run eject`
+3. **/history?symbol=xxx (GET)**: Returns comprehensive information about a specific stock, including prices, volumes, and dates.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **/history?symbol=xxx&from=yyyy-mm-dd (GET)**: Returns information about a particular stock starting from a selected date "yyyy-mm-dd".
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to Use the Web Application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository to your local machine.
+2. Install the necessary dependencies using npm or yarn.
+3. Ensure you have access to the QUT VPN for retrieving the stock market data from the QUT API.
+4. Run the web application locally on your preferred web browser.
+5. Use the provided search and filter options to explore stock information.
+6. Select a stock to view detailed information and use the date filtering feature to narrow down the results.
+7. Analyze the graphical representation of the closing prices for specific dates.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Used
 
-## Learn More
+- React: The web application is developed using React, a popular JavaScript library for building user interfaces.
+- QUT API: The stock market data is fetched using the QUT API, accessible through QUT VPN.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Disclaimer
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This web application uses a free API provided by QUT, and the availability and reliability of the data depend on the API's status. The developers are not responsible for any inaccuracies or issues with the stock information displayed on the web application.
 
-### Code Splitting
+Feel free to contribute to the project by opening issues, suggesting improvements, or submitting pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy stock researching! 📈
