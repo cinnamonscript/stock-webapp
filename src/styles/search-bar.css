@@ -1,0 +1,24 @@
+.search {
+    margin-right: 20px;
+    align-content: center;
+}
+
+.search-bar {
+    margin-right: 30px;
+}
+
+.search-row {
+    padding-top: 0px;
+}
+
+.search-row .search-bar .search-form {
+    padding: 0px;
+}
+
+.search-row .search-bar .search {
+    margin-bottom: 10px;
+}
+
+.search-row .search-bar-info {
+    margin-top: 0px;
+}
