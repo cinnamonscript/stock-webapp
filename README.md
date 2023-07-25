@@ -6,7 +6,7 @@ This repository contains a simple web application built using React that connect
 
 ### Web Application
 
-The web application is an extension of the web application developed in assignment 2, and it offers the following features:
+The web application offers the following features:
 
 1. **Filtering**: Users can filter the stocks database using stock symbols, stock names, and stock industries.
 
